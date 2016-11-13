@@ -11,6 +11,19 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <h1>
+    <form action="register.jsp" method="post">
+        <input type="text" name="email" placeholder="EMAIL"><br>
+        <input type="text" name="password" placeholder="PASSWORD"><br>
+        <select name="subject" multiple="multiple">
+            <option value="Psychology">Psychology</option>
+            <option value="Psychairtry">Psychairtry</option>
+            <option value="Philosophy">Philosophy</option>
+        </select>
+        <input type="submit" value="LOG IN"><br>
+    </form>
+  </h1>
+
+  <%=(request.getAttribute("message") != null) ? request.getAttribute("message") : ""%>
   </body>
 </html>
